@@ -69,38 +69,32 @@ function Drawer({ drawerNumber, onBack }: DrawerProps) {
             onClick={(e) => e.stopPropagation()} // clicking the card itself does not close
           >
             {/* Item content */}
-            <div
-              className="
-                grid flex-1
-                grid-cols-1 sm:grid-cols-2
-                items-center
-                gap-4 sm:gap-8
-                overflow-auto
-              "
-            >
-              {/* Information */}
-              <div className="min-w-0">
-                <h2 className="text-xl sm:text-2xl font-bold">
-                  {selectedItem.name}
-                </h2>
+            <div className="flex-1 overflow-auto ml-6 pr-4">
 
-                <p className="mt-2 text-sm sm:text-base text-gray-600">
-                  {selectedItem.description}
-                </p>
-              </div>
+              {/* Image floats at the top-right */}
+              <img
+                src={selectedItem.image}
+                alt={selectedItem.name}
+                className="
+                  float-right
+                  w-2/5
+                  max-h-[40vh]
+                  object-contain
+                "
+              />
 
-              {/* Image */}
-              <div className="flex min-h-0 items-center justify-center">
-                <img
-                  src={selectedItem.image}
-                  alt={selectedItem.name}
-                  className="
-                    max-h-[50vh]
-                    max-w-full
-                    object-contain
-                  "
-                />
-              </div>
+              {/* Text wraps around the image and continues underneath */}
+              <h2 className="text-xl sm:text-2xl font-bold mt-6">
+                {selectedItem.name}
+              </h2>
+
+              <p className="mt-4 text-sm sm:text-base text-gray-600 whitespace-pre-line">
+                {selectedItem.description}
+              </p>
+
+              {/* Clears the float so later content starts below the image */}
+              <div className="clear-both" />
+
             </div>
 
             {/* Close button */}

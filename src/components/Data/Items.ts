@@ -28,7 +28,7 @@ export const drawers: Record<number, DrawerData> = {
     items: [
       {
         name: "Adenosine",
-        description: "testeting",
+        description: "中文名稱：腺苷（Adenosine）\n\n藥物分類：抗心律不整藥物。\n\n主要用途：終止部分陣發性上心室頻脈（PSVT）。\n\n作用機轉：暫時減慢房室結（AV node）的電氣傳導，協助中斷異常心律迴路。\n\n常見副作用：臉部潮紅、胸悶、呼吸不適、短暫心跳減慢或房室傳導阻滯。\n\n護理注意事項：給藥時持續監測心電圖及生命徵象，備妥急救設備，並依醫囑及院內流程使用。",        
         image: "/d1/Adenosine.png",
         left: "14%",
         top: "30%",
