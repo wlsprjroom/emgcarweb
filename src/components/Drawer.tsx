@@ -84,14 +84,22 @@ function Drawer({ drawerNumber, onBack }: DrawerProps) {
               />
 
               {/* Text wraps around the image and continues underneath */}
-              <h2 className="text-xl sm:text-2xl font-bold mt-6">
+              <h2 className="text-xl sm:text-2xl font-bold mt-6 ml-6">
                 {selectedItem.name}
               </h2>
 
-              <p className="mt-4 text-sm sm:text-base text-gray-600 whitespace-pre-line">
-                {selectedItem.description}
-              </p>
-
+              <div className="mt-4 ml-6 space-y-3 text-base/6 text-gray-700 font-['Noto_Sans_TC']">
+                {selectedItem.description.map((item, index) => (
+                  <p key={index}>
+                    <span className="font-bold text-cyan-600">
+                      {item.label}：
+                    </span>
+                    <span className="font-normal text-gray-700">
+                      {item.value}
+                    </span>
+                  </p>
+                ))}
+              </div>
               {/* Clears the float so later content starts below the image */}
               <div className="clear-both" />
 
