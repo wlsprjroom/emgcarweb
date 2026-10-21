@@ -465,7 +465,7 @@ export const drawers: Record<number, DrawerData> = {
             { label: "常見副作用", value: "臉部潮紅、胸悶、呼吸不適、短暫心跳減慢或房室傳導阻滯" },
             { label: "護理注意事項", value: "給藥時持續監測心電圖及生命徵象，備妥急救設備，並依醫囑及院內流程使用" }
         ], 
-        image: "/d3/空針.webp",
+        image: "/d3/syringe.webp",
         left: "20%",
         top: "40%",
         width: "16%",
@@ -481,7 +481,7 @@ export const drawers: Record<number, DrawerData> = {
             { label: "常見副作用", value: "臉部潮紅、胸悶、呼吸不適、短暫心跳減慢或房室傳導阻滯" },
             { label: "護理注意事項", value: "給藥時持續監測心電圖及生命徵象，備妥急救設備，並依醫囑及院內流程使用" }
         ], 
-        image: "/d3/抽血試管.webp",
+        image: "/d3/blood-transfusion.webp",
         left: "40%",
         top: "40%",
         width: "12%",
@@ -497,7 +497,7 @@ export const drawers: Record<number, DrawerData> = {
             { label: "常見副作用", value: "臉部潮紅、胸悶、呼吸不適、短暫心跳減慢或房室傳導阻滯" },
             { label: "護理注意事項", value: "給藥時持續監測心電圖及生命徵象，備妥急救設備，並依醫囑及院內流程使用" }
         ], 
-        image: "/d3/紙膠帶.webp",
+        image: "/d3/paper-tape.webp",
         left: "40%",
         top: "50%",
         width: "12%",
@@ -513,7 +513,7 @@ export const drawers: Record<number, DrawerData> = {
             { label: "常見副作用", value: "臉部潮紅、胸悶、呼吸不適、短暫心跳減慢或房室傳導阻滯" },
             { label: "護理注意事項", value: "給藥時持續監測心電圖及生命徵象，備妥急救設備，並依醫囑及院內流程使用" }
         ], 
-        image: "/d3/針頭.webp",
+        image: "/d3/needle.webp",
         left: "38%",
         top: "59%",
         width: "14%",
@@ -545,7 +545,7 @@ export const drawers: Record<number, DrawerData> = {
             { label: "常見副作用", value: "臉部潮紅、胸悶、呼吸不適、短暫心跳減慢或房室傳導阻滯" },
             { label: "護理注意事項", value: "給藥時持續監測心電圖及生命徵象，備妥急救設備，並依醫囑及院內流程使用" }
         ], 
-        image: "/d3/止血帶.webp",
+        image: "/d3/tourniquet.webp",
         left: "30%",
         top: "70%",
         width: "4%",
@@ -561,7 +561,7 @@ export const drawers: Record<number, DrawerData> = {
             { label: "常見副作用", value: "臉部潮紅、胸悶、呼吸不適、短暫心跳減慢或房室傳導阻滯" },
             { label: "護理注意事項", value: "給藥時持續監測心電圖及生命徵象，備妥急救設備，並依醫囑及院內流程使用" }
         ], 
-        image: "/d3/T型接管.webp",
+        image: "/d3/Tpiece.webp",
         left: "38%",
         top: "70%",
         width: "16%",
@@ -577,7 +577,7 @@ export const drawers: Record<number, DrawerData> = {
             { label: "常見副作用", value: "臉部潮紅、胸悶、呼吸不適、短暫心跳減慢或房室傳導阻滯" },
             { label: "護理注意事項", value: "給藥時持續監測心電圖及生命徵象，備妥急救設備，並依醫囑及院內流程使用" }
         ], 
-        image: "/d3/輸血.webp",
+        image: "/d3/blood-transfusion.webp",
         left: "54%",
         top: "40%",
         width: "6%",
@@ -593,7 +593,7 @@ export const drawers: Record<number, DrawerData> = {
             { label: "常見副作用", value: "臉部潮紅、胸悶、呼吸不適、短暫心跳減慢或房室傳導阻滯" },
             { label: "護理注意事項", value: "給藥時持續監測心電圖及生命徵象，備妥急救設備，並依醫囑及院內流程使用" }
         ], 
-        image: "/d3/免針iv.webp",
+        image: "/d3/needleless-iv.webp",
         left: "62%",
         top: "40%",
         width: "6%",
@@ -625,7 +625,7 @@ export const drawers: Record<number, DrawerData> = {
             { label: "常見副作用", value: "臉部潮紅、胸悶、呼吸不適、短暫心跳減慢或房室傳導阻滯" },
             { label: "護理注意事項", value: "給藥時持續監測心電圖及生命徵象，備妥急救設備，並依醫囑及院內流程使用" }
         ], 
-        image: "/d3/置留針.webp",
+        image: "/d3/iv.webp",
         left: "56%",
         top: "80%",
         width: "18%",
