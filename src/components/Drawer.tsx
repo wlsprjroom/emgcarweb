@@ -18,7 +18,7 @@ function Drawer({ drawerNumber, onBack }: DrawerProps) {
 
   // Find the correct drawer
   const drawer = drawers[drawerNumber];
-
+  const [isClosing, setIsClosing] = useState(false);
   return (
     <div className="relative">
       {/* =========================
@@ -106,34 +106,46 @@ function Drawer({ drawerNumber, onBack }: DrawerProps) {
             </div>
 
             {/* Close button */}
-            <div className="mt-8 flex justify-center">
-              <button
-                className="
-                  group relative z-0 overflow-hidden
-                  cursor-pointer rounded-xl
-                  bg-white px-4 py-2
-                  text-pink-600
-                  shadow-md shadow-pink-600/15
-                  inset-ring-2 inset-ring-pink-600
-                  transition-all duration-300
-                  hover:text-white
-                  hover:shadow-lg hover:shadow-pink-600/50
-                "
-                onClick={() => setSelectedItem(null)}
-              >
-                <span
-                  className="
-                    absolute inset-0 z-0
-                    origin-left scale-x-0
-                    bg-pink-600
-                    transition-transform duration-300 ease-out
-                    group-hover:scale-x-100
-                  "
-                />
+            <button
+  className="
+    group relative z-0 overflow-hidden
+    cursor-pointer rounded-xl
+    bg-white px-4 py-2
+    text-pink-600
+    shadow-md shadow-pink-600/15
+    inset-ring-2 inset-ring-pink-600
+    transition-all duration-300
+    hover:text-white
+  "
+  onClick={() => {
+    if (isClosing) return;
 
-                <span className="relative z-10">Close</span>
-              </button>
-            </div>
+    setIsClosing(true);
+
+    window.setTimeout(() => {
+      setSelectedItem(null);
+      setIsClosing(false);
+    }, 300);
+  }}
+>
+  <span
+    className={`
+      absolute inset-0 z-0 origin-left
+      bg-pink-600
+      transition-transform duration-300 ease-out
+      ${isClosing ? "scale-x-100" : "scale-x-0"}
+    `}
+  />
+
+  <span
+    className={`
+      relative z-10
+      ${isClosing ? "text-white" : ""}
+    `}
+  >
+    Close
+  </span>
+</button>
           </div>
         </div>
       )}
