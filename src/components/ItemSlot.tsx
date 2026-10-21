@@ -1,4 +1,3 @@
-
 interface ItemSlotProps {
   image: string
   left: string
@@ -14,51 +13,66 @@ function ItemSlot({
   top,
   width,
   height,
-  onClick,
+  onClick
 }: ItemSlotProps) {
   return (
     <div
-      className="absolute cursor-pointer group"
-      style={{ left, top, width, height }}
-      onClick={onClick}
-    >
-      {/* Keep the original clickable area */}
-      <div className="w-full h-full" />
+  className="absolute cursor-pointer group"
+  style={{
+    left,
+    top,
+    width,
+    height,
+  }}
+  onClick={onClick}
+>
+  {/* Original hover / click area — unchanged */}
+  <div className="w-full h-full" />
 
-      {/* Visual layers do not intercept clicks */}
-      <div className="absolute inset-0 overflow-visible pointer-events-none">
-        {/* Glow */}
-        <div
-          className="
-            absolute left-1/2 top-1/2
-            -translate-x-1/2 -translate-y-1/2
-            w-36 h-36 rounded-full
-            bg-blue-400/60 blur-xl
-            opacity-0 scale-90
-            group-hover:opacity-100
-            group-hover:scale-100
-            transition-[opacity,transform]
-            duration-200 ease-out
-          "
-        />
+  {/* Visual layers — can extend outside the slot */}
+  <div className="absolute inset-0 overflow-visible pointer-events-none">
 
-        {/* Item image */}
-        <img
-          src={image}
-          alt="Item"
-          decoding="async"
-          className="
-            absolute left-1/2 top-1/2
-            -translate-x-1/2 -translate-y-1/2
-            max-w-[12rem] max-h-[12rem]
-            w-auto h-auto object-contain
-            p-[2%]
-            scale-0 group-hover:scale-100
-            transition-transform duration-200 ease-out
-          "
-        />
-      </div>
-    </div>
+    {/* Glow layer */}
+    <div
+      className="
+        absolute
+        left-1/2 top-1/2
+        -translate-x-1/2 -translate-y-1/2
+        w-36 h-36
+        rounded-full
+        bg-blue-400/70
+        blur-2xl
+        opacity-0
+        scale-0
+        group-hover:opacity-100
+        group-hover:scale-100
+        transition-all duration-300 ease-out
+      "
+    />
+
+    {/* Image layer */}
+    <img
+      src={image}
+      alt="Item"
+      className="
+        absolute
+        left-1/2
+        top-1/2
+        max-w-50
+        max-h-50
+        object-contain
+        p-[2%]
+        -translate-x-1/2
+        -translate-y-1/2
+        scale-0
+        group-hover:scale-100
+        transition-transform
+        duration-300
+        ease-out
+      "
+    />
+  </div>
+</div>
   )
 }
 

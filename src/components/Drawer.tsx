@@ -25,12 +25,11 @@ function Drawer({ drawerNumber, onBack }: DrawerProps) {
           DRAWER IMAGE
           ========================= */}
       <img
-  src={drawer.image}
-  alt={`Drawer ${drawerNumber} opened`}
-  fetchPriority="high"
-  decoding="async"
-  className="w-full h-auto rounded-lg shadow-[0_4px_20px_rgba(0,0,0,0.4)]"
-/>
+        src={drawer.image}
+        alt={`Drawer ${drawerNumber} opened`}
+        className="w-full h-auto rounded-lg shadow-[0_4px_20px_rgba(0,0,0,0.4)]"
+      />
+
       {/* =========================
           ITEMS
           ========================= */}
