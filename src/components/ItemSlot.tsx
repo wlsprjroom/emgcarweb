@@ -64,8 +64,8 @@ function ItemSlot({
         p-[2%]
         -translate-x-1/2
         -translate-y-1/2
-        opacity-0
-        group-hover:opacity-100
+        scale-0
+        group-hover:scale-100
         transition-transform
         duration-300
         ease-out
