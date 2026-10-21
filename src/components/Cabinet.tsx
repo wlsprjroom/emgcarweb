@@ -8,7 +8,7 @@ function Cabinet({ onOpenDrawer }: CabinetProps) {
 
       {/* Cabinet image */}
       <img
-        src="/cabinet.jpg"
+        src="/cabinet.webp"
         alt="Cabinet"
         className="w-full h-auto rounded-lg shadow-[0_4px_20px_rgba(0,0,0,0.4)]"
       />
