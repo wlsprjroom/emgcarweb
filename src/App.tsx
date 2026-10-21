@@ -1,7 +1,7 @@
 import { useState } from "react"
 import Cabinet from "./components/Cabinet"
 import Drawer from "./components/Drawer"
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 function App() {
   // null = cabinet is closed
