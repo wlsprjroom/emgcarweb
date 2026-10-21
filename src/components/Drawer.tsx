@@ -88,7 +88,7 @@ function Drawer({ drawerNumber, onBack }: DrawerProps) {
                 {selectedItem.name}
               </h2>
 
-              <div className="mt-4 ml-6 space-y-3 text-base/6 text-gray-700 font-['Noto_Sans_TC']">
+              <div className="mt-4 ml-6 space-y-3 text-base/6 text-gray-700 font-['Noto-Sans-TC']">
                 {selectedItem.description.map((item, index) => (
                   <p key={index}>
                     <span className="font-bold text-cyan-600">

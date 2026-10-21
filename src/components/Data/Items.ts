@@ -418,7 +418,7 @@ export const drawers: Record<number, DrawerData> = {
         height: "20%",
       },
       {
-        name: "Bite block",
+        name: "Bite",
         description: [
             { label: "中文名稱", value: "腺苷（Adenosine）" },
             { label: "藥物分類", value: "抗心律不整藥物" },
