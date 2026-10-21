@@ -106,7 +106,7 @@ function Drawer({ drawerNumber, onBack }: DrawerProps) {
             </div>
 
             {/* Close button */}
-            <div className="mt-4 flex justify-center">
+            <div className="mt-8 flex justify-center">
               <button
                 className="
                   group relative z-0 overflow-hidden

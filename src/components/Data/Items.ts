@@ -481,7 +481,7 @@ export const drawers: Record<number, DrawerData> = {
             { label: "常見副作用", value: "臉部潮紅、胸悶、呼吸不適、短暫心跳減慢或房室傳導阻滯" },
             { label: "護理注意事項", value: "給藥時持續監測心電圖及生命徵象，備妥急救設備，並依醫囑及院內流程使用" }
         ], 
-        image: "/d3/blood-transfusion.webp",
+        image: "/d3/blood-tube.webp",
         left: "40%",
         top: "40%",
         width: "12%",
