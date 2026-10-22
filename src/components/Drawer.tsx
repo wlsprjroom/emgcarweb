@@ -50,23 +50,11 @@ function Drawer({ drawerNumber, onBack }: DrawerProps) {
           ========================= */}
       {selectedItem && (
         <div
-          className="
-            fixed inset-0 z-50
-            flex items-center justify-center
-            bg-black/60 p-4 sm:p-6
-          "
+          className=" fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4 sm:p-6 "
           //onClick={() => setSelectedItem(null)} // click the dark backdrop to close
         >
           <div
-            className="
-              flex w-full max-w-2xl
-              max-h-[90vh]
-              flex-col
-              rounded-xl bg-white
-              p-4 sm:p-6
-              shadow-2xl
-            "
-            onClick={(e) => e.stopPropagation()} // clicking the card itself does not close
+            className=" flex w-full max-w-2xl max-h-[90vh] h-[54vh] flex-col rounded-xl bg-white p-4 sm:p-6 shadow-2xl "
           >
             {/* Item content */}
             <div className="flex-1 overflow-auto ml-6 pr-4">
@@ -76,10 +64,7 @@ function Drawer({ drawerNumber, onBack }: DrawerProps) {
                 src={selectedItem.image}
                 alt={selectedItem.name}
                 className="
-                  float-right
-                  w-2/5
-                  max-h-[40vh]
-                  object-contain
+                  float-right w-2/5 max-h-[40vh] object-contain mt-6 shadow-xl
                 "
               />
 
@@ -88,7 +73,7 @@ function Drawer({ drawerNumber, onBack }: DrawerProps) {
                 {selectedItem.name}
               </h2>
 
-              <div className="mt-4 ml-6 space-y-3 text-base/6 text-gray-700 font-['Noto-Sans-TC']">
+              <div className="mt-4 ml-6 mr-6 space-y-3 text-base/6 text-gray-700 font-['Noto-Sans-TC']">
                 {selectedItem.description.map((item, index) => (
                   <p key={index}>
                     <span className="font-bold text-cyan-600">
@@ -106,28 +91,19 @@ function Drawer({ drawerNumber, onBack }: DrawerProps) {
             </div>
 
             {/* Close button */}
-            <div className="mt-8 flex justify-center">
+            <div className="mt-8 mb-6 flex justify-center">
               <button
                 className="
-                  group relative z-0 overflow-hidden
-                  cursor-pointer rounded-xl
-                  bg-white px-4 py-2
-                  text-pink-600
-                  shadow-md shadow-pink-600/15
-                  inset-ring-2 inset-ring-pink-600
-                  transition-all duration-300
-                  hover:text-white
-                  hover:shadow-lg hover:shadow-pink-600/50
+                  group relative z-0 overflow-hidden cursor-pointer rounded-xl bg-white px-4 py-2
+                  text-pink-600 shadow-md shadow-pink-600/15 inset-ring-2 inset-ring-pink-600 transition-all duration-300
+                  hover:text-white hover:shadow-lg hover:shadow-pink-600/50
                 "
                 onClick={() => setSelectedItem(null)}
               >
                 <span
                   className="
-                    absolute inset-0 z-0
-                    origin-left scale-x-0
-                    bg-pink-600
-                    transition-transform duration-300 ease-out
-                    group-hover:scale-x-100
+                    absolute inset-0 z-0 origin-left scale-x-0 bg-pink-600
+                    transition-transform duration-300 ease-out group-hover:scale-x-100
                   "
                 />
 
