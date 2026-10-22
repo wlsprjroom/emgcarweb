@@ -54,10 +54,10 @@ function Drawer({ drawerNumber, onBack }: DrawerProps) {
           //onClick={() => setSelectedItem(null)} // click the dark backdrop to close
         >
           <div
-            className=" flex w-full max-w-2xl max-h-[90vh] h-[54vh] flex-col rounded-xl bg-white p-4 sm:p-6 shadow-2xl "
+            className=" flex w-full max-w-2xl max-h-[90vh] h-[60vh] flex-col rounded-xl bg-white p-4 sm:p-6 shadow-2xl "
           >
             {/* Item content */}
-            <div className="flex-1 overflow-auto ml-6 pr-4">
+            <div className="flex-1 overflow-auto">
 
               {/* Image floats at the top-right */}
               <img
@@ -91,7 +91,7 @@ function Drawer({ drawerNumber, onBack }: DrawerProps) {
             </div>
 
             {/* Close button */}
-            <div className="mt-8 mb-6 flex justify-center">
+            <div className="my-6 flex w-full justify-center">
               <button
                 className="
                   group relative z-0 overflow-hidden cursor-pointer rounded-xl bg-white px-4 py-2
