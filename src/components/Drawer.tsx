@@ -64,7 +64,7 @@ function Drawer({ drawerNumber, onBack }: DrawerProps) {
                 src={selectedItem.image}
                 alt={selectedItem.name}
                 className="
-                  float-right w-2/5 max-h-[40vh] object-contain mt-6 shadow-xl
+                  float-right w-2/5 max-h-[40vh] object-contain mt-6
                 "
               />
 
