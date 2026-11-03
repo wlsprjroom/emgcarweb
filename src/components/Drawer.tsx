@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ItemSlot from "./ItemSlot";
 import BackButton from "./BackButton";
 // Adjust this path to match where items.ts is in your project:
@@ -15,10 +15,27 @@ interface DrawerProps {
 function Drawer({ drawerNumber, onBack }: DrawerProps) {
   // Store the whole item (name, description, image...), not just the image path
   const [selectedItem, setSelectedItem] = useState<DrawerItem | null>(null);
+  const [revealedItem, setRevealedItem] = useState<string | null>(null);
 
   // Find the correct drawer
   const drawer = drawers[drawerNumber];
+  useEffect(() => {
+  const handleOutsideClick = (e: MouseEvent) => {
+    const target = e.target as HTMLElement;
 
+    // Ignore clicks inside an item slot
+    if (target.closest("[data-item-slot]")) return;
+
+    // Hide the revealed item
+    setRevealedItem(null);
+  };
+
+  document.addEventListener("click", handleOutsideClick);
+
+  return () => {
+    document.removeEventListener("click", handleOutsideClick);
+  };
+}, []);
   return (
     <div className="relative">
       {/* =========================
@@ -33,17 +50,24 @@ function Drawer({ drawerNumber, onBack }: DrawerProps) {
       {/* =========================
           ITEMS
           ========================= */}
-      {drawer.items.map((item) => (
-        <ItemSlot
-          key={item.image}
-          image={item.image}
-          left={item.left}
-          top={item.top}
-          width={item.width}
-          height={item.height}
-          onClick={() => setSelectedItem(item)}
-        />
-      ))}
+      <div className="absolute inset-0">
+  {drawer.items.map((item) => (
+    <ItemSlot
+      key={item.image}
+      image={item.image}
+      left={item.left}
+      top={item.top}
+      width={item.width}
+      height={item.height}
+      isRevealed={revealedItem === item.image}
+      onReveal={() => setRevealedItem(item.image)}
+      onClick={() => {
+        setRevealedItem(null);
+        setSelectedItem(item);
+      }}
+    />
+  ))}
+</div>
 
       {/* =========================
           ITEM INFO MODAL
