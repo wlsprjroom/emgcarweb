@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import ItemSlot from "./ItemSlot";
-import BackButton from "./BackButton";
+import Button from "./Button";
 // Adjust this path to match where items.ts is in your project:
 //   items.ts inside components/data/  ->  "./data/items"
 //   items.ts inside src/data/         ->  "../data/items"
@@ -38,13 +38,25 @@ function Drawer({ drawerNumber, onBack }: DrawerProps) {
 }, []);
   return (
     <div className="relative">
+      {/* BACK BUTTON */}
+  <Button
+    onClick={onBack}
+    className="
+      absolute z-20
+      top-20 left-14
+      sm:top-16 sm:left-10
+      md:top-14 md:left-8
+    "
+  >
+    ← Back
+  </Button>
       {/* =========================
           DRAWER IMAGE
           ========================= */}
       <img
         src={drawer.image}
         alt={`Drawer ${drawerNumber} opened`}
-        className="w-full h-auto rounded-lg shadow-[0_4px_20px_rgba(0,0,0,0.4)]"
+        className="block w-full h-auto rounded-lg shadow-[0_4px_20px_rgba(0,0,0,0.4)]"
       />
 
       {/* =========================
@@ -114,34 +126,17 @@ function Drawer({ drawerNumber, onBack }: DrawerProps) {
 
             </div>
 
-            {/* Close button */}
-            <div className="my-6 flex w-full justify-center">
-              <button
-                className="
-                  group relative z-0 overflow-hidden cursor-pointer rounded-xl bg-white px-4 py-2
-                  text-pink-600 shadow-md shadow-pink-600/15 inset-ring-2 inset-ring-pink-600 transition-all duration-300
-                  hover:text-white hover:shadow-lg hover:shadow-pink-600/50
-                "
-                onClick={() => setSelectedItem(null)}
-              >
-                <span
-                  className="
-                    absolute inset-0 z-0 origin-left scale-x-0 bg-pink-600
-                    transition-transform duration-300 ease-out group-hover:scale-x-100
-                  "
-                />
+            
+{/* Close button */}
+<div className="my-6 flex w-full justify-center">
+  <Button onClick={() => setSelectedItem(null)}>
+    Close
+  </Button>
+</div>
 
-                <span className="relative z-10">Close</span>
-              </button>
-            </div>
           </div>
         </div>
       )}
-
-      {/* =========================
-          BACK BUTTON
-          ========================= */}
-      <BackButton onClick={onBack} />
     </div>
   );
 }
