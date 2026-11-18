@@ -40,7 +40,7 @@ function ItemInfo({ item, onClose }: ItemInfoProps) {
           <div className="clear-both" />
         </div>
 
-        <div className="my-6 flex justify-center">
+        <div className="mt-6 flex justify-center">
           <Button onClick={onClose}>Close</Button>
         </div>
       </div>

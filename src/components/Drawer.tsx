@@ -51,7 +51,7 @@ function Drawer({ drawerNumber, onBack }: DrawerProps) {
           />
         ))}
 
-        <Button onClick={onBack} className="absolute top-[6%] left-[5%] z-20">
+        <Button onClick={onBack} className="absolute top-[8%] left-[8%] w-20 h-10 z-20">
           ← Back
         </Button>
       </Stage>
