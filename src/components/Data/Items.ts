@@ -20,12 +20,17 @@ export interface DrawerItem {
 
 export interface DrawerData {
   image: string
+  /** Intrinsic pixel size of `image`, used to lock the aspect ratio. */
+  width: number
+  height: number
   items: DrawerItem[]
 }
 
 export const drawers: Record<number, DrawerData> = {
   1: {
     image: "/d1.webp",
+    width: 1201,
+    height: 1600,
     items: [
       {
         name: "Adenosine",
@@ -320,6 +325,8 @@ export const drawers: Record<number, DrawerData> = {
 
   2: {
     image: "/d2.webp",
+    width: 1775,
+    height: 2365,
     items: [
       {
         name: "Penlight",
@@ -454,6 +461,8 @@ export const drawers: Record<number, DrawerData> = {
 
   3: {
     image: "/d3.webp",
+    width: 1775,
+    height: 2365,
     items: [
       {
         name: "空針",
@@ -636,6 +645,8 @@ export const drawers: Record<number, DrawerData> = {
 
   4: {
     image: "/d4.webp",
+    width: 1775,
+    height: 2365,
     items: [
       {
         name: "Item 11",
